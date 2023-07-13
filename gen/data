@@ -1,0 +1,49 @@
+# # # # # # # # # # # # # # # # # # # # # # # #
+
+@subtask samples
+
+manual example-01.in
+
+# # # # # # # # # # # # # # # # # # # # # # # #
+
+@subtask s1
+@include samples
+
+gen --type=random --maxn=3 --maxm=1
+gen --type=random --maxn=8 --minn=5
+gen --type=random --maxn=8 --minn=6
+gen --type=random --maxn=8 --minn=8 --savek=10
+gen --type=random --maxn=8 --minn=8 --savek=20
+gen --type=random --maxn=8 --minn=8 --savek=40
+gen --type=random --maxn=8 --minn=8 --minm=10000
+gen --type=random --maxn=8 --minn=8 --minm=10000 --savek=30
+# # # # # # # # # # # # # # # # # # # # # # # #
+
+@subtask s2
+@include samples s1
+
+
+gen --type=random --maxn=15 --minn=8 --savek=10
+gen --type=random --maxn=15 --minn=15 --maxm=1
+gen --type=random --maxn=15 --minn=15 --savek=50
+gen --type=random --maxn=15 --minn=15 --savek=200 --minm=10000
+gen --type=random --maxn=15 --minn=15 --savek=400 --minm=10000
+gen --type=random --maxn=15 --minn=15 --minm=10000
+
+# # # # # # # # # # # # # # # # # # # # # # # #
+
+@subtask full
+@include samples s1 s2
+
+gen --type=random --maxn=20 --minn=20 --savek=50
+gen --type=random --maxn=20 --minn=20 --maxm=1
+gen --type=random --maxn=20 --minn=20 --maxm=10
+gen --type=random --maxn=20 --minn=20 --maxm=100
+gen --type=random --maxn=20 --minn=20 --maxm=1000
+gen --type=random --maxn=20 --minn=20 --savek=200 --minm=10000
+gen --type=random --maxn=20 --minn=20 --savek=400 --minm=10000
+gen --type=random --maxn=20 --minn=20 --savek=600 --minm=10000
+gen --type=random --maxn=20 --minn=20 --savek=1000 --minm=10000
+gen --type=random --maxn=20 --minn=20 --minm=10000
+
+# # # # # # # # # # # # # # # # # # # # # # # #
