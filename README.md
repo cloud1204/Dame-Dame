@@ -1,6 +1,6 @@
 # ダメダメ!
 
-This problem is used in IONC 2023 Day3 practice contest.
+IONC 2023 Practice Problem (Original)
 
 ## Problem Statement
 
